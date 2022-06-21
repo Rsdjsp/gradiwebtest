@@ -233,13 +233,25 @@ export default function Description({ product }) {
   const [amount, setAmount] = useState(1);
   const [modal, setModal] = useState(false);
   const { options } = product;
+
+  /**
+   * Extract the color values
+   */
   const { values: colors } = options
     ? options.find((option) => option.name === "Color")
     : {};
+
+  /**
+   * Extract the sizes values
+   */
   const { values: sizes } = options
     ? options.find((option) => option.name === "Size")
     : {};
 
+  /**
+   * Prevent page reload
+   * @param {event} event
+   */
   const addToCart = (event) => {
     event.preventDefault();
   };

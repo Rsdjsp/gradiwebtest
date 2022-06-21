@@ -110,6 +110,9 @@ export default function Carrousel({ product }) {
   const [counter, setCounter] = useState(0);
   const { media } = product;
 
+  /**
+   * Navigate between product images
+   */
   const next = () => {
     if (media) {
       setCounter(counter + 1);
@@ -118,7 +121,10 @@ export default function Carrousel({ product }) {
       }
     }
   };
-
+  /**
+   * Change the current image
+   * @param {Number} index
+   */
   const changeImg = (index) => {
     if (index !== counter) {
       setCounter(index);

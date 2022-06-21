@@ -1,10 +1,10 @@
 import "./";
 import axios from "axios";
 import { React, useEffect, useState } from "react";
-import Carrousel from "./Components/Carrousel";
-import Navbar from "./Components/Navbar";
+import Carrousel from "./components/Carrousel";
+import Navbar from "./components/Navbar";
 import styled from "styled-components";
-import Description from "./Components/Description";
+import Description from "./components/Description";
 
 const Home = styled.div`
   display: grid;
@@ -36,6 +36,11 @@ const Title = styled.h1`
 
 export default function App() {
   const [product, setProduct] = useState({});
+  /**
+   * [Fecth data]
+   *
+   * @return  {Object}  [Prouct data]
+   */
   useEffect(() => {
     axios
       .get(

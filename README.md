@@ -1,3 +1,7 @@
+# Before Start
+
+You must install the dependencies of the project before starting it please run npm update or npm intstall
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
